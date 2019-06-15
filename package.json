@@ -1,0 +1,25 @@
+{
+  "name": "gulp-practice",
+  "version": "0.0.2",
+  "description": "A Practice Project for Gulp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiegeSailor/GulpPractice.git"
+  },
+  "keywords": [
+    "Gulp"
+  ],
+  "author": "Zhang Jin Yu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiegeSailor/GulpPractice/issues"
+  },
+  "homepage": "https://github.com/SiegeSailor/GulpPractice#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
