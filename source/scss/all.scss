@@ -1,0 +1,15 @@
+$primary: #362428;
+$huge: 1.6;
+
+.view {
+    background: $primary;
+    color: $primary;
+}
+
+p {
+    line-height: $huge;
+    transform: rotate(120deg);
+    filter:blur(5px);
+    font-size: 50px;
+    height:50px;
+}

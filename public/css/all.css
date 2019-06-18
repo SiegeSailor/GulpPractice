@@ -1,0 +1,14 @@
+.view {
+  background: #362428;
+  color: #362428; }
+
+p {
+  line-height: 1.6;
+  -webkit-transform: rotate(120deg);
+     -moz-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+          transform: rotate(120deg);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  font-size: 50px;
+  height: 50px; }
