@@ -12,3 +12,21 @@ p {
           filter: blur(5px);
   font-size: 50px;
   height: 50px; }
+
+h1 {
+  font-weight: bold;
+  font-size: 50px; }
+
+span {
+  padding: 2px; }
+
+body {
+  margin: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#362428), to(white));
+  background: -webkit-linear-gradient(#362428, white);
+  background: -moz-linear-gradient(#362428, white);
+  background: -o-linear-gradient(#362428, white);
+  background: linear-gradient(#362428, white); }
+
+* {
+  font-family: 'Noto Open Sans'; }

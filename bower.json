@@ -1,0 +1,25 @@
+{
+  "name": "bower-practice",
+  "description": "A Practice Project for Bower.",
+  "main": "index.js",
+  "authors": [
+    "Zhang Jin Yu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Bower"
+  ],
+  "homepage": "https://github.com/SiegeSailor/GulpPractice",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^3.4.1",
+    "bootstrap": "^4.3.1"
+  }
+}
