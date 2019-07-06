@@ -168,3 +168,10 @@ gulp.task('imageCompress', () =>
 // npm install
 // gulp
 // oh he needs to have source, gulpfile.js, package.json, bower.json, .bowerrc
+
+var ghPages = require('gulp-gh-pages');
+ 
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
+});
