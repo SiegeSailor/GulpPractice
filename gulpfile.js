@@ -6,14 +6,19 @@ var browserSync = require('browser-sync').create();
 let cleanCSS = require('gulp-clean-css');
 
 var minimist = require('minimist');
-var envOption = {
+var envOptions = {
   string: 'env',
   default: {
     env: 'develop'
-  }
-}
-var options = minimist(process.argv.slice(2), envOption);
+  },
+};
+var options = minimist(process.argv.slice(2), envOptions);
+console.log(options)
 var gulpif = require('gulp-if'); // example in scssCompile
+
+var argv = require('yargs').argv;
+var isProduction = (argv.production === undefined) ? false : true;
+console.log(isProduction); 
 
 gulp.task('copyHTML', function () {
   return gulp.src('./source/**/*.html').pipe(gulp.dest('./public/backup'));
@@ -79,6 +84,15 @@ gulp.task('sassWatchCompile', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
+var clean = require('gulp-clean');
+gulp.task('cleanPublic', function () {
+  return gulp.src('./public/', {read: false})
+      .pipe(clean());
+});
+var gulpSequence = require('gulp-sequence')
+// [] means to run parallelly
+gulp.task('sequence', gulpSequence(['scssCompile', 'jadeCompile'], 'copyHTML', ['babelCompile']))
+
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
@@ -137,4 +151,20 @@ gulp.task('browser-sync', function () {
   });
 });
 
-gulp.task('default', ['copyHTML', 'jadeCompile', 'scssCompile', 'scssWatch', 'multiWatch', 'babelWatchCompile', 'browser-sync']);
+gulp.task('default', ['copyHTML', 'jadeCompile', 'scssCompile', 'scssWatch', 'multiWatch', 'babelCompile', 'browser-sync']);
+
+const imagemin = require('gulp-imagemin');
+gulp.task('imageCompress', () =>
+    gulp.src('./source/**/*.jpeg')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./public/'))
+);
+
+
+// take a note of .gitignore
+// ignore all files that you generate from gulp and bower
+// then if someone has your project, he just needs to do
+// bower install
+// npm install
+// gulp
+// oh he needs to have source, gulpfile.js, package.json, bower.json, .bowerrc

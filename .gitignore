@@ -1,1 +1,5 @@
 node_modules
+bower
+bower_components
+public
+.tmp
