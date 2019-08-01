@@ -25,14 +25,14 @@
     "autoprefixer": "^9.6.0",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.26.7",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^6.0.0",
+    "gulp-imagemin": "^5.0.0",
     "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.6.0",
     "gulp-order": "^1.2.0",
@@ -49,7 +49,8 @@
   },
   "dependencies": {
     "graceful-fs": "^4.1.15",
-    "minimatch": "^3.0.2"
+    "minimatch": "^3.0.2",
+    "node-sass": "^4.12.0"
   },
   "browserslist": []
 }

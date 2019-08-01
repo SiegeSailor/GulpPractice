@@ -3,3 +3,4 @@ bower
 bower_components
 public
 .tmp
+venv
